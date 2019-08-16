@@ -1,0 +1,32 @@
+:root {
+  /** Colours */
+  --c-blauw: #32c5c5;
+  --c-white: white;
+  --c-divide: #f7fafc;
+  --c-text: #525252;
+  --c-black: black;
+  --c-roos: rgb(255, 98, 98);
+  --c-cta: rgb(46, 191, 155);
+  --c-mute: #C6C6C6;
+
+
+  /** Fonts */
+  --f-font:'Roboto', sans-serif;
+
+  /** Font-weights */
+  --f-regular: 400;
+  --f-regular: var(--f-reg);
+  --f-medium: 500;
+  --f-med: var(--f-medium);
+  --f-bold: 700;
+  --f-black: 900;
+
+  /** Unit */
+  --unit: 8px;
+  --unit2: calc(2 * var(--unit));
+  --unit3: calc(3 * var(--unit));
+  --unit4: calc(4 * var(--unit));
+  --unit6: calc(2 * var(--unit3));
+  --unit8: calc(4 * var(--unit2));
+
+}

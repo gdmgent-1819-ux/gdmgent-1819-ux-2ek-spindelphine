@@ -1,0 +1,364 @@
+html {
+    font-size: calc(62.5%);
+    line-height: calc(62.5%);
+    font-family: "robot", "sans-serif"
+}
+
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+span,
+sub {
+    font-family: 'Roboto', sans-serif;
+    color: var(--c-text);
+    letter-spacing: .1rem;
+    font-size: 1.6rem;
+    transition: .2s;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header input[type="checkbox"] {
+    display: none;
+}
+
+header div>ul:first-of-type {
+    justify-self: flex-end;
+    padding: var(--unit2) var(--unit3);
+}
+
+header nav {
+    background: var(--c-mute);
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px var(--unit3);
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.28);
+}
+
+header nav>ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+header div>ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+header li {
+    display: inline-block;
+}
+
+header li:not(:first-of-type):not(.dropcontent),
+header input {
+    margin-left: var(--unit3);
+}
+
+header nav a {
+    color: var(--c-white);
+}
+
+header input {
+    border: none;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50px;
+    padding: var(--unit);
+    margin-right: calc(var(--unit) / 2);
+    font-family: "roboto";
+    font-size: 1.6rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+header h1 {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-image: url("../../brand/logo.png");
+    filter: brightness(85%);
+}
+
+.active {
+    font-weight: var(--f-bold);
+    border-bottom: var(--unit) solid var(--c-white);
+
+}
+
+nav li:hover {
+    text-shadow: 0 0 1px var(--c-white), 0 0 1px var(--c-white);
+}
+
+
+/* de pagina*/
+/* eerst de banner*/
+
+.container {
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 1024px;
+    width: 100%;
+    padding: var(--unit3);
+}
+
+main>div:first-of-type {
+    background: url("../../images/banner.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+    min-height: 350px;
+    max-height: 500px;
+    padding: var(--unit4);
+}
+
+#banner article * {
+    color: var(--c-white);
+    z-index: 1;
+}
+
+h2 {
+
+    display: inline-block;
+    color: var(--c-white);
+    text-transform: uppercase;
+    font-size: 3.6rem;
+    font-weight: var(--f-black);
+    line-height: 5rem;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+article {
+    background: rgba(0, 0, 0, .7);
+    margin-top: var(--unit6);
+    max-width: 300px;
+    padding: var(--unit3);
+    display: flex;
+    flex-direction: column;
+}
+
+article h3 {
+    font-weight: var(--f-bold);
+}
+
+article p {
+    margin: calc(var(--unit2) - (var(--unit) / 2)) 0 var(--unit4);
+    letter-spacing: .125rem;
+    line-height: 2.1rem;
+}
+
+.cta {
+    color: var(--c-white);
+    background-color: var(--c-cta);
+    font-weight: var(--f-med);
+    padding: var(--unit);
+    border-radius: 4px;
+    align-self: flex-start;
+}
+
+#klasblogs {
+    padding-bottom: var(--unit8);
+}
+
+#klasblogs section {
+    background: var(--c-white);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+div>h3 {
+    font-size: 3.6rem;
+    color: var(--c-groen);
+    font-weight: var(--f-black);
+    text-transform: uppercase;
+    letter-spacing: .15rem;
+    margin: calc(var(--unit) + var(--unit4)) 0 var(--unit8);
+}
+
+.klas {
+    flex-basis: calc((100% / 3) - var(--unit3));
+    background-color: var(--c-divide);
+}
+
+.klas>div {
+    position: relative;
+    overflow: hidden;
+    max-height: 240px;
+}
+
+.klas img {
+    float: left;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: .2s ease-out;
+}
+
+.klas:hover img {
+    transform: scale(1.05);
+    transform-origin: center;
+}
+
+.klas .shadow {
+    z-index: 2;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.01) 1%, rgba(172, 172, 172, 0.33) 59%, rgba(0, 0, 0, 1) 100%);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+}
+
+.klas h4 {
+    z-index: 3;
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    bottom: 0;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    font-weight: var(--f-black);
+    padding: var(--unit3);
+    color: var(--c-white);
+}
+
+.klas p,
+.klas .cta {
+    margin: var(--unit3);
+    float: left;
+}
+
+.klas p {
+    letter-spacing: .05rem;
+    line-height: 2.4rem;
+    margin-bottom: 0;
+}
+
+#extra {
+    background: var(--c-divide);
+    padding-bottom: var(--unit8)
+}
+
+#extra .container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#extra h3 {
+    width: 100%;
+}
+
+.extracard {
+    flex-basis: calc(50% - 2 * var(--unit));
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.extracard div {
+    display: flex;
+    flex-direction: row;
+}
+
+.extracard img {
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: calc(100% / 3);
+}
+
+.extracard article {
+    display: flex;
+    justify-content: center;
+    background: var(--c-white);
+    margin: 0;
+    max-width: unset;
+    box-sizing: border-box;
+    align-self: stretch;
+    width: calc(100% / 3 * 2);
+}
+
+.extracard p {
+    margin-bottom: 0;
+    line-height: 2.4rem;
+}
+
+.extracard:nth-of-type(1),
+.extracard:nth-of-type(2) {
+    margin-bottom: var(--unit3);
+}
+
+footer {
+    background: var(--c-blauw);
+    display: flex;
+    padding: calc(var(--unit4) + var(--unit));
+    flex-direction: column;
+    align-items: center;
+}
+
+footer li {
+    display: inline-block;
+    margin: 0 var(--unit3);
+}
+
+footer * {
+    font-size: 1.2rem;
+    color: var(--c-white);
+}
+
+footer>* {
+    margin-top: var(--unit4);
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer>a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer div p {
+    font-weight: var(--f-bold);
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer nav a {
+    font-size: 1.8rem;
+}
+
+main>div:first-of-type {
+    padding-top: 120px;
+}
+
+.extracard img:hover {
+    filter: contrast(50%)
+}
